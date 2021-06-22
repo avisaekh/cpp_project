@@ -16,7 +16,7 @@ public:
 };
 int main()
 {
-    construct c; // yesma constructor is being called; object create huda constructor call(invoke) hunxa;
+    construct c; // yesma constructor is being called;  object create huda constructor call(invoke) hunxa;
     cout<<"a: "<<c.a<<endl;
     cout<<"b: "<<c.b<<endl;
     return 0;
