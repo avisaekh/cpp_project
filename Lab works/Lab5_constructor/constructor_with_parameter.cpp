@@ -9,14 +9,14 @@ private:
     int a,b;
 
 public:
-    point( int x, int y) //constructor with parameter/ parameterized constructor
+    point( int x, int y) //constructor with parameter / parameterized constructor
     {
         a=x;
         b=y;
     }
     int geta()
     {
-        return a;                                                // (assignment on construction overloading.)
+        return a;                                             // (assignment on construction overloading.)
     }
     int getb()
     {
