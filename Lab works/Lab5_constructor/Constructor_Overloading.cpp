@@ -17,7 +17,7 @@ public:
        cout<<"ADDRESS: "<<address<<endl;
     }
 
-    office( double x, double y)//parameterized
+    office( double x, double y)//parameterized constructor.
     {
         daily=x;
         bonus=y;
