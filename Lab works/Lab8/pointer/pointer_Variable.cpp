@@ -21,7 +21,7 @@ public:
 };
 int main()
 {
-    box box1(3,5,6),box2(1,2,3);
+    box box1(3,5,6);
     box *ptrbox;  //pointer variable||holds the address of other variable.
 
     cout<<"address of box1 variable "<< &box1<<endl;
@@ -31,8 +31,8 @@ int main()
     cout<<" volume of box1 : "<<ptrbox->volume()<<endl;
     //Excess the member function using member excess operator(->)
 
-    cout<<"address of box1 variable "<< &box2<<endl;
-    ptrbox=&box2;
-    cout<<" volume of box2 : "<<ptrbox->volume()<<endl;
+    //cout<<"address of box1 variable "<< &box2<<endl;
+    //ptrbox=&box2;
+    //cout<<" volume of box2 : "<<ptrbox->volume()<<endl;
     return 0;
 }
