@@ -1,38 +1,37 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
+//pointers as objects
+class box{
+    private :
+        double length, breadth, height;
 
-class box
-{
-private:
-    double length, breadth, height;
-public:
-    box(double len,double brdth, double hgt)
-    {
-        cout<<"constructor is called"<<endl;
+    public :
+    box(double len, double bdth,double hgt){
+        cout<< "Constructor is called"<<endl;
         length=len;
-        breadth=brdth;
+        breadth=bdth;
         height=hgt;
     }
-    double volume()
-    {
+    double volume(){
         return length*breadth*height;
     }
 };
 int main()
 {
-    box box1(3,5,6);
-    box *ptrbox;  //pointer variable||holds the address of other variable.
+    box box1(4,6.5,7.4),box2(6.6,5.4,7.8);
+    box *ptrbox;
+    cout<<"Address of box1 variable "<<&box1 <<endl;
 
-    cout<<"address of box1 variable "<< &box1<<endl;
+    //Pointer is such variable which carry address of variable
+    ptrbox=&box1;
 
-    ptrbox=&box1;  // yo case ma box1 variable ko address lai ptrbox le carry garxa.
+    //access the member function using member access oprerator(-->)
+    cout<<"Volume of box1 "<<ptrbox->volume()<<endl;
 
-    cout<<" volume of box1 : "<<ptrbox->volume()<<endl;
-    //Excess the member function using member excess operator(->)
+    //Set the address of second object.
+    ptrbox=&box2;
+    cout<<"Volume of box2 "<<ptrbox->volume()<<endl;
 
-    //cout<<"address of box1 variable "<< &box2<<endl;
-    //ptrbox=&box2;
-    //cout<<" volume of box2 : "<<ptrbox->volume()<<endl;
-    return 0;
+
+return 0;
 }
