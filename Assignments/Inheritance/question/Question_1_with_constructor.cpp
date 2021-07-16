@@ -98,15 +98,15 @@ public:
         cout<<"Position: Typist"<<endl;
         cout<<"Type: casual "<<endl;
         cout<<"speed: "<<speed<<endl;
-        cout<<wages;
+        cout<<"wages"<<wages;
         cout<<" \n"<<endl;
 
     }
 };
 int main()
 {
-   teacher s1;
-    officer o1;
+   //teacher s1;
+    //officer o1;
     casual_typist t1;
     regular_typist t2;
     return 0;
