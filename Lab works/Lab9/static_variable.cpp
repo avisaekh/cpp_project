@@ -26,6 +26,7 @@ public:
 
 int first::b=0;
 
+
 int main(){
     first obj1(10 ,20);
     first obj2(100,200);
