@@ -4,6 +4,7 @@ using namespace std;
 //static variable.
 class first
 {
+private:
     int a;
     static int b;
 public:

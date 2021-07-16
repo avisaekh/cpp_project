@@ -24,7 +24,7 @@ class complex{
         }
 
         void dispaly(){
-            cout<<"The sum of the complex value is : "<<real<<"j "<<imaginary;
+            cout<<"The sum of the complex value is : "<<real<<"+  i"<<imaginary;
         }
 
 };
