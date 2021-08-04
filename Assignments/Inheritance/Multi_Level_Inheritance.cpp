@@ -1,65 +1,56 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-
-class terrestrial_animal {
-//MAIN CLASS/ parent class
-public:
-
-        terrestrial_animal()
-        {
-            cout<<"constructor Trrestrial Animal"<<endl;
-        }
-
-        ~terrestrial_animal()
-        {
-            cout<<"destructor Terrestrial animal"<<endl;
-        }
-
-};
-
-class domestic_animal
-//parent class
+class Cars
 {
 
 public:
-        domestic_animal()
-        {
-            cout<<"domestic animal constructor"<<endl;
-        }
-
-        ~domestic_animal()
-        {
-            cout<<"domestic animal destructor"<<endl;
-        }
+    Cars()
+    {
+        cout << "Constructor of Cars " << endl;
+    }
+    ~Cars()
+    {
+        cout << "Destructor of Cars " << endl;
+    }
 };
-
-class dog: protected terrestrial_animal, private domestic_animal
-// child class of terrestrial_animal and domestic_animal
+class Sports_Cars : protected Cars // Sports_Cars is the child class of parent class car
 {
 public:
-    dog()
-        {
-            cout<<"dog constructor"<<endl;
-        }
-
-    ~dog()
-        {
-            cout<<"dog destructor"<<endl;
-        }
-
+    Sports_Cars()
+    {
+        cout << "Constructor of Sports_Cars " << endl;
+    }
+    ~Sports_Cars()
+    {
+        cout << "Destructor of Sports_Cars " << endl;
+    }
 };
-
+class Super_Cars : private Sports_Cars // Super_Cars is the child class of Sports_Cars
+{
+public:
+    Super_Cars()
+    {
+        cout << "Constructor of Super_Cars " << endl;
+    }
+    ~Super_Cars()
+    {
+        cout << "Destructor of Super_Cars " << endl;
+    }
+};
 int main()
 {
+    Super_Cars BMW; // Construtor is called automatically by the compiler
+    // Destructor is called upon exit
 
-    dog xyz;
+    /*output seems as
+    Constructor of Cars
+    Constructor of Sports_Cars
+    Constructor of Super_Cars
+    Destructor of Super_Cars
+    Destructor of Sports_Cars
+    Destructor of Cars
+    */
+    //So from output we can verify the constructor is
+    //called from starting top and destructor is called starting from bottom
     return 0;
 }
-/*OUTPUT:
-constructor Animal
-domestic constructor
-dog constructor
-dog destructor
-domestic destructor
-destructor animal*/
